@@ -1,0 +1,54 @@
+{
+    "name": "bilalmalik1996/tap-payment-gateway",
+    "description": "Laravel Tap Payment Gatway",
+    "keywords": [
+        "bilalmalik1996",
+        "tap-payment-gateway"
+    ],
+    "homepage": "https://github.com/bilalmalik1996/tap-payment-gateway",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "BIlal Malik",
+            "email": "bilalmalik531996@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BilalMalik1996\\TapPaymentGateway\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BilalMalik1996\\TapPaymentGateway\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BilalMalik1996\\TapPaymentGateway\\TapPaymentGatewayServiceProvider"
+            ],
+            "aliases": {
+                "TapPaymentGateway": "BilalMalik1996\\TapPaymentGateway\\TapPaymentGatewayFacade"
+            }
+        }
+    }
+}
